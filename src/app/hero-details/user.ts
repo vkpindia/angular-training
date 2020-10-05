@@ -1,4 +1,6 @@
-export const users: Array<any> = [
+import { StudentT } from '../models/student.model';
+
+export const users: Array<StudentT> = [
   {
     id: 1,
     name: 'Leanne Graham',
