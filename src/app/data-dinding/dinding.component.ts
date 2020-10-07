@@ -13,6 +13,8 @@ export class DataDindingComponent implements OnInit {
   public qty: number;
   public isShowProduct: boolean;
 
+  public productList: Array<string>;
+  public selectProduct: string;
 
   constructor() { }
 
@@ -22,7 +24,16 @@ export class DataDindingComponent implements OnInit {
     this.price = 4000;
     this.qty = 20;
     this.isShowProduct = false;
-    console.log('isShowProduct', this.isShowProduct);
+    this.selectProduct = 'camera';
+    this.productList = [
+      'camera',
+      'camera1',
+      'camera2',
+      'camera3',
+      'camera4',
+      'camera5',
+      'camera6',
+    ];
   }
 
   onValueChage(): void {

@@ -1,7 +1,8 @@
-<h3>Data Binding in Angular</h3><hr>
+<h3>Data Binding in Angular</h3>
+<hr>
 
 <span>Do you want to hide product?</span>
-<input type="checkbox" [(ngModel)]="isShowProduct" (change)="onValueChage()"><br>
+<input type="checkbox" [(ngModel)]="isShowProduct"><br><!--  (change)="onValueChage()" -->
 
 <div class="product" [hidden]="isShowProduct">
   <h3>Product Details</h3>
@@ -9,4 +10,18 @@
   <p><strong>Brand:</strong> {{brand}}</p>
   <p><strong>Price:</strong> {{price}}</p>
   <p><strong>Quantity:</strong> {{qty}}</p>
+</div>
+<hr />
+
+<br> <br>
+
+<div class="product-list">
+  <label for="product">Select Camera: </label>
+  <select name="product" [(ngModel)]="selectProduct">
+    <option *ngFor="let camera of productList" [value]="camera">{{camera}}</option>
+  </select>
+  <div class="product-img">
+    <img src="assets/images/{{selectProduct}}.jpg" alt="">
+    <span>{{selectProduct}}</span>
+  </div>
 </div>
