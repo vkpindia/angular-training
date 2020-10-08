@@ -7,13 +7,17 @@ import { HeroComponent } from './hero/hero.component';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { DataDindingComponent } from './data-dinding/dinding.component';
 import { FormsModule } from '@angular/forms';
+import { EventsComponent } from './events/events.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroComponent,
     HeroDetailsComponent,
-    DataDindingComponent
+    DataDindingComponent,
+    EventsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
