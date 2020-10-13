@@ -9,6 +9,7 @@ import { DataDindingComponent } from './data-dinding/dinding.component';
 import { FormsModule } from '@angular/forms';
 import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './login/login.component';
+import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginComponent } from './login/login.component';
     HeroDetailsComponent,
     DataDindingComponent,
     EventsComponent,
-    LoginComponent
+    LoginComponent,
+    PipesDemoComponent
   ],
   imports: [
     BrowserModule,
