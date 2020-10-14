@@ -3,6 +3,8 @@
   <!-- Users table -->
   <table cellspacing="0" cellpadding="10" border="1">
      <thead>
+
+      <!-- USERNAME or USER NAME -->
        <tr>
          <th *ngFor="let head of tableHeader; let index = i">
            {{head | uppercase}}
@@ -12,11 +14,14 @@
      </thead>
      <tbody>
        <tr *ngFor="let user of users">
-         <td *ngFor="let u of tableHeader">
-           <span>{{user[u]}}</span>
+         <td *ngFor="let u of user | keyvalue: originalOrder">
+           {{u.value}}
+           <!-- <span>Key: {{u.key}}</span>
+           <span>Value: {{u.value}}</span> -->
+           <!-- <span>{{user[u]}}</span>
            <span *ngIf="user && user.address">
             {{user.address[u]}}
-           </span>
+           </span> -->
          </td>
          <td>
            <a href="javascript:void(0)" style="color:#f00" (click)="onDeleteUser(user)">Delete</a>
