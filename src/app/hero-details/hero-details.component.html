@@ -1,5 +1,10 @@
 <div>
   <h3>User Details</h3>
+  Show Record: <select name="" id="" [(ngModel)]="endIndex">
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+  </select>
   <!-- Users table -->
   <table cellspacing="0" cellpadding="10" border="1">
      <thead>
@@ -13,7 +18,7 @@
        </tr>
      </thead>
      <tbody>
-       <tr *ngFor="let user of users">
+       <tr *ngFor="let user of users | slice: startIndex : endIndex">
          <td *ngFor="let u of user | keyvalue: originalOrder">
            {{u.value}}
            <!-- <span>Key: {{u.key}}</span>
@@ -30,4 +35,6 @@
      </tbody>
   </table>
 </div>
+
+<a href="javascript:void(0)" (click)="showRecord()">Show More</a>
 

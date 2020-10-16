@@ -14,6 +14,9 @@ export class HeroDetailsComponent implements OnInit {
   public tableHeader: Array<string>;
   public userRecord: any;
 
+  public startIndex: number;
+  public endIndex: number;
+
   originalOrder = (a: KeyValue<number, string>, b: KeyValue<number, string>): number => {
     return 0;
   }
@@ -21,6 +24,8 @@ export class HeroDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.startIndex = 0;
+    this.endIndex = 5;
     /* this.userRecord = {
       id: 1,
       name: 'Leanne Graham',
@@ -55,6 +60,15 @@ export class HeroDetailsComponent implements OnInit {
     const isDeleteUser = confirm('Are you sure to delete this user?');
     if (isDeleteUser) {
       this.users.splice(userRecordIndex, 1);
+    }
+  }
+
+  public showRecord(): void {
+    this.startIndex = this.startIndex + 5;
+    this.endIndex = this.endIndex + 5;
+    if (this.startIndex >= this.users.length) {
+      this.startIndex = 0;
+      this.endIndex = 5;
     }
   }
 }
