@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './login/login.component';
 import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
+import { GenderPipe } from './pipes/gender.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
     DataDindingComponent,
     EventsComponent,
     LoginComponent,
-    PipesDemoComponent
+    PipesDemoComponent,
+    GenderPipe
   ],
   imports: [
     BrowserModule,

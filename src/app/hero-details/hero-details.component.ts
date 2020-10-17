@@ -12,6 +12,7 @@ export class HeroDetailsComponent implements OnInit {
 
   public users: Array<StudentT>;
   public tableHeader: Array<string>;
+  public students: Array<any>;
   public userRecord: any;
 
   public startIndex: number;
@@ -24,6 +25,10 @@ export class HeroDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.students = [
+      { name: 'Smith', sex: 'Male'},
+      { name: 'Kelly', sex: 'Female'}
+    ];
     this.startIndex = 0;
     this.endIndex = 5;
     /* this.userRecord = {

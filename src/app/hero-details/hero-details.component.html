@@ -38,3 +38,13 @@
 
 <a href="javascript:void(0)" (click)="showRecord()">Show More</a>
 
+
+<h3>Custome Pipe Demostration</h3>
+
+<ul>
+  <li *ngFor="let student of students">
+      <p><strong>Name: </strong> {{student.name}}</p>
+      <p><strong>Gender: </strong> {{student.sex | gender}}</p>
+  </li>
+</ul>
+
