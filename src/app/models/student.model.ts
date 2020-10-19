@@ -2,6 +2,7 @@ export interface StudentT {
   id: number;
   name: string;
   username: string;
+  salary: number;
   email: string;
   address: AddressT;
   phone: string;

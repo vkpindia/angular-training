@@ -11,6 +11,8 @@ import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './login/login.component';
 import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
 import { GenderPipe } from './pipes/gender.pipe';
+import { GradePipe } from './pipes/grade.pipe';
+import { RangePipe } from './pipes/range.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { GenderPipe } from './pipes/gender.pipe';
     EventsComponent,
     LoginComponent,
     PipesDemoComponent,
-    GenderPipe
+    GenderPipe,
+    GradePipe,
+    RangePipe
   ],
   imports: [
     BrowserModule,

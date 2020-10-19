@@ -14,6 +14,8 @@ export class HeroDetailsComponent implements OnInit {
   public tableHeader: Array<string>;
   public students: Array<any>;
   public userRecord: any;
+  public min: number;
+  public max: number;
 
   public startIndex: number;
   public endIndex: number;
@@ -50,13 +52,14 @@ export class HeroDetailsComponent implements OnInit {
     this.users = users;
     this.tableHeader = [
       'ID',
-      'name',
-      'username',
-      'email',
-      'city',
-      'zipcode',
-      'phone',
-      'website'
+      'Name',
+      'User Name',
+      'Email',
+      'Salary',
+      'City',
+      'Pincode',
+      'Mobile',
+      'Website'
     ];
   }
 

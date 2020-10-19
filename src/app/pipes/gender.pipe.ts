@@ -15,7 +15,7 @@ export class GenderPipe implements PipeTransform {
       output = 'F';
     }
 
-    return null;
+    return output;
   }
 
 }

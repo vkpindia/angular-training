@@ -1,38 +1,53 @@
 <div>
   <h3>User Details</h3>
-  Show Record: <select name="" id="" [(ngModel)]="endIndex">
+  Show Record: <select [(ngModel)]="endIndex">
     <option value="5">5</option>
     <option value="10">10</option>
     <option value="15">15</option>
   </select>
+  <div>
+    Min: <select [(ngModel)]="min">
+      <option value="20000">20000</option>
+      <option value="40000">40000</option>
+      <option value="60000">60000</option>
+    </select>
+    Max: <select name="" id="" [(ngModel)]="max">
+      <option value="50000">50000</option>
+      <option value="60000">60000</option>
+      <option value="70000">70000</option>
+      <option value="80000">80000</option>
+      <option value="90000">90000</option>
+      <option value="100000">100000</option>
+    </select>
+  </div>
   <!-- Users table -->
   <table cellspacing="0" cellpadding="10" border="1">
-     <thead>
+    <thead>
 
       <!-- USERNAME or USER NAME -->
-       <tr>
-         <th *ngFor="let head of tableHeader; let index = i">
-           {{head | uppercase}}
-         </th>
-         <th>Actions</th>
-       </tr>
-     </thead>
-     <tbody>
-       <tr *ngFor="let user of users | slice: startIndex : endIndex">
-         <td *ngFor="let u of user | keyvalue: originalOrder">
-           {{u.value}}
-           <!-- <span>Key: {{u.key}}</span>
+      <tr>
+        <th *ngFor="let head of tableHeader; let index = i">
+          {{head | uppercase}}
+        </th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody><!--  | slice: startIndex : endIndex -->
+      <tr *ngFor="let user of users | slice: startIndex : endIndex | range: min : max">
+        <td *ngFor="let u of user | keyvalue: originalOrder">
+          {{u.value}}
+          <!-- <span>Key: {{u.key}}</span>
            <span>Value: {{u.value}}</span> -->
-           <!-- <span>{{user[u]}}</span>
+          <!-- <span>{{user[u]}}</span>
            <span *ngIf="user && user.address">
             {{user.address[u]}}
            </span> -->
-         </td>
-         <td>
-           <a href="javascript:void(0)" style="color:#f00" (click)="onDeleteUser(user)">Delete</a>
-         </td>
-       </tr>
-     </tbody>
+        </td>
+        <td>
+          <a href="javascript:void(0)" style="color:#f00" (click)="onDeleteUser(user)">Delete</a>
+        </td>
+      </tr>
+    </tbody>
   </table>
 </div>
 
@@ -43,8 +58,7 @@
 
 <ul>
   <li *ngFor="let student of students">
-      <p><strong>Name: </strong> {{student.name}}</p>
-      <p><strong>Gender: </strong> {{student.sex | gender}}</p>
+    <p><strong>Name: </strong> {{student.name}}</p>
+    <p><strong>Gender: </strong> {{student.sex | gender}}</p>
   </li>
 </ul>
-

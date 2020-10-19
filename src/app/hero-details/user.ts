@@ -6,6 +6,7 @@ export const users: Array<StudentT> = [
     name: 'Leanne Graham',
     username: 'Bret',
     email: 'Sincere@april.biz',
+    salary: 30000,
     address: {
       street: 'Kulas Light',
       suite: 'Apt. 556',
@@ -29,6 +30,7 @@ export const users: Array<StudentT> = [
     name: 'Ervin Howell',
     username: 'Antonette',
     email: 'Shanna@melissa.tv',
+    salary: 50000,
     address: {
       street: 'Victor Plains',
       suite: 'Suite 879',
@@ -52,6 +54,7 @@ export const users: Array<StudentT> = [
     name: 'Clementine Bauch',
     username: 'Samantha',
     email: 'Nathan@yesenia.net',
+    salary: 47000,
     address: {
       street: 'Douglas Extension',
       suite: 'Suite 847',
@@ -75,6 +78,7 @@ export const users: Array<StudentT> = [
     name: 'Patricia Lebsack',
     username: 'Karianne',
     email: 'Julianne.OConner@kory.org',
+    salary: 60800,
     address: {
       street: 'Hoeger Mall',
       suite: 'Apt. 692',
@@ -98,6 +102,7 @@ export const users: Array<StudentT> = [
     name: 'Chelsey Dietrich',
     username: 'Kamren',
     email: 'Lucio_Hettinger@annie.ca',
+    salary: 89700,
     address: {
       street: 'Skiles Walks',
       suite: 'Suite 351',
@@ -121,6 +126,7 @@ export const users: Array<StudentT> = [
     name: 'Mrs. Dennis Schulist',
     username: 'Leopoldo_Corkery',
     email: 'Karley_Dach@jasper.info',
+    salary: 78000,
     address: {
       street: 'Norberto Crossing',
       suite: 'Apt. 950',
@@ -144,6 +150,7 @@ export const users: Array<StudentT> = [
     name: 'Kurtis Weissnat',
     username: 'Elwyn.Skiles',
     email: 'Telly.Hoeger@billy.biz',
+    salary: 30890,
     address: {
       street: 'Rex Trail',
       suite: 'Suite 280',
@@ -167,6 +174,7 @@ export const users: Array<StudentT> = [
     name: 'Nicholas Runolfsdottir V',
     username: 'Maxime_Nienow',
     email: 'Sherwood@rosamond.me',
+    salary: 78900,
     address: {
       street: 'Ellsworth Summit',
       suite: 'Suite 729',
@@ -190,6 +198,7 @@ export const users: Array<StudentT> = [
     name: 'Glenna Reichert',
     username: 'Delphine',
     email: 'Chaim_McDermott@dana.io',
+    salary: 65000,
     address: {
       street: 'Dayna Park',
       suite: 'Suite 449',
@@ -213,6 +222,7 @@ export const users: Array<StudentT> = [
     name: 'Clementina DuBuque',
     username: 'Moriah.Stanton',
     email: 'Rey.Padberg@karina.biz',
+    salary: 49000,
     address: {
       street: 'Kattie Turnpike',
       suite: 'Suite 198',
