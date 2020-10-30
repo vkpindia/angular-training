@@ -13,6 +13,7 @@ import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
 import { GenderPipe } from './pipes/gender.pipe';
 import { GradePipe } from './pipes/grade.pipe';
 import { RangePipe } from './pipes/range.pipe';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RangePipe } from './pipes/range.pipe';
     PipesDemoComponent,
     GenderPipe,
     GradePipe,
-    RangePipe
+    RangePipe,
+    TemplateFormComponent
   ],
   imports: [
     BrowserModule,

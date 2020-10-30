@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { users } from './user';
 import { StudentT } from '../models/student.model';
 import { KeyValue } from '@angular/common';
+import { LoginService } from '../services/login.service';
+import { WelcomeService } from '../services/welcome.service';
 
 @Component({
   selector: 'app-hero-details',
@@ -24,9 +26,11 @@ export class HeroDetailsComponent implements OnInit {
     return 0;
   }
 
-  constructor() { }
+  constructor(private ws: WelcomeService) { }
 
   ngOnInit(): void {
+    let welcomeSms = this.ws.getMessage('Scott');
+    console.log('welcomeSms', welcomeSms);
     this.students = [
       { name: 'Smith', sex: 'Male'},
       { name: 'Kelly', sex: 'Female'}

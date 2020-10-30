@@ -4,7 +4,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   selector: 'app-root',
   // template: `<h1>Welcome to {{uname}}</h1>`,
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: []
 })
 
 export class AppComponent implements OnInit {
