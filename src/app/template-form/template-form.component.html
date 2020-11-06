@@ -6,14 +6,14 @@
       <div class="form-group">
         <label for="" class="field-label">Name</label>
         <input type="text" name="t1" class="form-control" [(ngModel)]="uname" #t1="ngModel" required>
-        <div *ngIf="f.submitted && f.invalid">
+        <div *ngIf="f.submitted && t1.invalid">
           <span class="error" *ngIf="t1.errors.required"> Name is required</span>
         </div>
       </div>
       <div class="form-group">
         <label for="" class="field-label">Email</label>
         <input type="email" name="t2" class="form-control" [(ngModel)]="email" #t2="ngModel" required email>
-        <div *ngIf="f.submitted && f.invalid">
+        <div *ngIf="f.submitted && t2.invalid">
           <span class="error" *ngIf="t2.errors.required"> Email is required</span>
           <span class="error" *ngIf="t2.errors.email"> Email must be a valid email address</span>
         </div>
@@ -21,7 +21,7 @@
       <div class="form-group">
         <label for="" class="field-label">Phone</label>
         <input type="text" name="t3" class="form-control" [(ngModel)]="phone" #t3="ngModel" required pattern="\d{10}">
-        <div *ngIf="f.submitted && f.invalid">
+        <div *ngIf="f.submitted && t3.invalid">
           <span class="error" *ngIf="t3.errors.required"> Phone is required</span>
           <span class="error" *ngIf="t3.errors.pattern"> Phone must be a number of 10 digits</span>
         </div>
@@ -30,7 +30,7 @@
       <div class="form-group">
         <label for="" class="field-label">Password</label>
         <input type="password" name="t4" class="form-control" [(ngModel)]="pass" #t4="ngModel" required minlength="6">
-        <div *ngIf="f.submitted && f.invalid">
+        <div *ngIf="f.submitted && t4.invalid">
           <span class="error" *ngIf="t4.errors.required"> Phone is required</span>
           <span class="error" *ngIf="t4.errors.minlength"> Password must be atleast 6 characters</span>
         </div>

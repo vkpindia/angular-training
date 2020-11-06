@@ -1,0 +1,48 @@
+<h1>Template Driven Form</h1><hr>
+
+<div class="container">
+  <div class="form-widget">
+    <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <label for="" class="field-label">Name</label>
+        <input type="text" formControlName="name" class="form-control">
+        <div *ngIf="sumbmitted && empForm.invalid" class="error">
+          <span *ngIf="f.name.hasError('required')">Please enter the name!</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="" class="field-label">Email</label>
+        <input type="email" formControlName="email" class="form-control">
+        <div *ngIf="sumbmitted && empForm.invalid" class="error">
+          <span *ngIf="f.email.hasError('required')">Please enter the email!</span>
+          <span *ngIf="f.email.hasError('pattern')">Please enter correct email address!</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="" class="field-label">Phone</label>
+        <input type="text" formControlName="phone" class="form-control">
+        <div *ngIf="sumbmitted && empForm.invalid" class="error">
+          <span *ngIf="f.phone.hasError('required')">Please enter the phone!</span>
+          <span *ngIf="f.phone.hasError('pattern')">Mobile must be 10 digit number!</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="" class="field-label">Password</label>
+        <input type="password" formControlName="pass" class="form-control">
+        <div *ngIf="sumbmitted && empForm.invalid" class="error">
+          <span *ngIf="f.pass.hasError('required')">Please enter the password!</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-success font-weight-bold">SUBMIT</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+

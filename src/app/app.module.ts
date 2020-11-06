@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { DataDindingComponent } from './data-dinding/dinding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './login/login.component';
 import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
@@ -14,6 +14,7 @@ import { GenderPipe } from './pipes/gender.pipe';
 import { GradePipe } from './pipes/grade.pipe';
 import { RangePipe } from './pipes/range.pipe';
 import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +28,16 @@ import { TemplateFormComponent } from './template-form/template-form.component';
     GenderPipe,
     GradePipe,
     RangePipe,
-    TemplateFormComponent
+    TemplateFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
