@@ -20,7 +20,9 @@ export class ReactiveFormComponent implements OnInit {
       name: new FormControl(null, Validators.required),
       email: new FormControl(null, [Validators.required, Validators.pattern(this.emailPattern)]),
       phone: new FormControl(null, [Validators.required, Validators.pattern(this.phonePattern)]),
-      pass: new FormControl(null, Validators.required)
+      pass: new FormControl(null, Validators.required),
+      address: new FormGroup({
+      })
     });
 
     this.empForm.get('name').valueChanges.subscribe(value => {

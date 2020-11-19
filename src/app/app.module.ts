@@ -16,6 +16,9 @@ import { RangePipe } from './pipes/range.pipe';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './user/user.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,13 +32,15 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     GradePipe,
     RangePipe,
     TemplateFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
 
   providers: [],
