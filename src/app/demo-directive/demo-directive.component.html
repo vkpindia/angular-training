@@ -1,0 +1,8 @@
+<div *ngFor="let day of weekdays">
+   <ng-container *ngIf="(day == 'Saturday' || day == 'Sunday'); else ctemplate">
+       <h1>{{day}} is a weekened.</h1>
+   </ng-container>
+   <ng-template #ctemplate>
+     <h3>{{day}} is not a weekened.</h3>
+   </ng-template>
+</div>

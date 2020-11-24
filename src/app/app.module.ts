@@ -18,6 +18,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './user/user.component';
+import { DemoDirectiveComponent } from './demo-directive/demo-directive.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { UserComponent } from './user/user.component';
     RangePipe,
     TemplateFormComponent,
     ReactiveFormComponent,
-    UserComponent
+    UserComponent,
+    DemoDirectiveComponent
   ],
   imports: [
     BrowserModule,
